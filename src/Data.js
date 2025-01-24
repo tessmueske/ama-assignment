@@ -13,12 +13,14 @@ function Data({ formatDate }) {
             },
         })
         .then((response) => {
+            console.log(data);
             if (!response.ok) {
                 throw new Error("Failed to fetch API data");
             }
             return response.json();
         })
         .then((data) => {
+            console.log(data);
             setData(data);
         })
         .catch((error) => console.error("Error fetching data:", error));
